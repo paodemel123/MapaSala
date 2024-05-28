@@ -16,7 +16,7 @@ namespace mapasala
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Professor()  );
+            Application.Run(new Principal()  );
         }
     }
 }
