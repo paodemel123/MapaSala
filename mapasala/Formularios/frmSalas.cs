@@ -13,11 +13,11 @@ namespace mapasala.Formularios
 {
     public partial class frmSalas : Form
     {
-        BlindingSource dados;
+        BindingSource dados;
         public frmSalas()
         {
             InitializeComponent();
-            dados = new BlindingSource();
+            dados = new BindingSource();
             dtGridSalas.DataSource = dados;
         }
 

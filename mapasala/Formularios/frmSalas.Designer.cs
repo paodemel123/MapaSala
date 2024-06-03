@@ -37,7 +37,6 @@ namespace mapasala.Formularios
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.islab = new System.Windows.Forms.CheckBox();
             this.Disponivel = new System.Windows.Forms.CheckBox();
             this.btnsalvar = new System.Windows.Forms.Button();
@@ -111,16 +110,6 @@ namespace mapasala.Formularios
             this.label4.TabIndex = 7;
             this.label4.Text = "Numero de cadeiras";
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(0, 0);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 8;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // islab
             // 
             this.islab.AutoSize = true;
@@ -169,7 +158,6 @@ namespace mapasala.Formularios
             this.Controls.Add(this.btnsalvar);
             this.Controls.Add(this.Disponivel);
             this.Controls.Add(this.islab);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -198,11 +186,10 @@ namespace mapasala.Formularios
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox islab;
         private System.Windows.Forms.CheckBox Disponivel;
         private System.Windows.Forms.Button btnsalvar;
-        private System.Windows.Forms.DataGridView dados;
+      
         private System.Windows.Forms.DataGridView dtGridSalas;
     }
 }

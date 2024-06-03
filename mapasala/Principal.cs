@@ -1,4 +1,5 @@
-﻿using System;
+﻿using mapasala.Formularios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,7 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace mapasala
+
+namespace MapaSala
 {
     public partial class Principal : Form
     {
@@ -17,28 +19,28 @@ namespace mapasala
             InitializeComponent();
         }
 
-        private void salasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            salas s = new salas();
-            s, ShowDialog();
+
         }
 
-        private void Principal_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cadastrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
         }
 
         private void salasToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            frmSalas s = new frmSalas();
+            s.ShowDialog();
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void salasToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void diaDaSemanaToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
@@ -48,10 +50,20 @@ namespace mapasala
 
         }
 
-        private void salasToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        private void cursosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmSalas = new frmSalas();
-            s,ShowDiaLog();
+
+        }
+
+        private void disciplinasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDisciplinas s = new frmDisciplinas();
+            s.ShowDialog();
+        }
+
+        private void horariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
