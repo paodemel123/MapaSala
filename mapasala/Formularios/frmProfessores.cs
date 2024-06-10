@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,6 +35,10 @@ namespace mapasala.Formularios
 
         private void salvar_Click_1(object sender, EventArgs e)
         {
+            ProfessoresEntidade p = new ProfessoresEntidade();
+            p.id = Convert.ToInt32(txtid.Value);
+            p.Apelido = txtapelido.Text;
+            p.Nome = txtnome.Text;
 
         }
     }

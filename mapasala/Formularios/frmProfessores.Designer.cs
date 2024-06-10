@@ -29,37 +29,37 @@ namespace mapasala.Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtid = new System.Windows.Forms.TextBox();
+            this.txtnome = new System.Windows.Forms.TextBox();
+            this.txtapelido = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.salvar = new System.Windows.Forms.Button();
+            this.btnsalvar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtid
             // 
-            this.textBox1.Location = new System.Drawing.Point(106, 58);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtid.Location = new System.Drawing.Point(106, 58);
+            this.txtid.Name = "txtid";
+            this.txtid.Size = new System.Drawing.Size(100, 20);
+            this.txtid.TabIndex = 0;
             // 
-            // textBox2
+            // txtnome
             // 
-            this.textBox2.Location = new System.Drawing.Point(240, 58);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtnome.Location = new System.Drawing.Point(240, 58);
+            this.txtnome.Name = "txtnome";
+            this.txtnome.Size = new System.Drawing.Size(100, 20);
+            this.txtnome.TabIndex = 1;
             // 
-            // textBox3
+            // txtapelido
             // 
-            this.textBox3.Location = new System.Drawing.Point(371, 58);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 2;
+            this.txtapelido.Location = new System.Drawing.Point(371, 58);
+            this.txtapelido.Name = "txtapelido";
+            this.txtapelido.Size = new System.Drawing.Size(100, 20);
+            this.txtapelido.TabIndex = 2;
             // 
             // label1
             // 
@@ -90,15 +90,15 @@ namespace mapasala.Formularios
             this.label3.TabIndex = 5;
             this.label3.Text = "Apelido";
             // 
-            // salvar
+            // btnsalvar
             // 
-            this.salvar.Location = new System.Drawing.Point(494, 58);
-            this.salvar.Name = "salvar";
-            this.salvar.Size = new System.Drawing.Size(89, 23);
-            this.salvar.TabIndex = 6;
-            this.salvar.Text = "Salvar";
-            this.salvar.UseVisualStyleBackColor = true;
-            this.salvar.Click += new System.EventHandler(this.salvar_Click_1);
+            this.btnsalvar.Location = new System.Drawing.Point(494, 58);
+            this.btnsalvar.Name = "btnsalvar";
+            this.btnsalvar.Size = new System.Drawing.Size(89, 23);
+            this.btnsalvar.TabIndex = 6;
+            this.btnsalvar.Text = "Salvar";
+            this.btnsalvar.UseVisualStyleBackColor = true;
+            this.btnsalvar.Click += new System.EventHandler(this.salvar_Click_1);
             // 
             // dataGridView1
             // 
@@ -114,13 +114,13 @@ namespace mapasala.Formularios
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.salvar);
+            this.Controls.Add(this.btnsalvar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtapelido);
+            this.Controls.Add(this.txtnome);
+            this.Controls.Add(this.txtid);
             this.Name = "frmProfessores";
             this.Text = "frmProfessores";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -131,13 +131,13 @@ namespace mapasala.Formularios
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtid;
+        private System.Windows.Forms.TextBox txtnome;
+        private System.Windows.Forms.TextBox txtapelido;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button salvar;
+        private System.Windows.Forms.Button btnsalvar;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
