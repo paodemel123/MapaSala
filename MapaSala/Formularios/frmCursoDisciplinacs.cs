@@ -14,37 +14,23 @@ namespace MapaSala.Formularios
     public partial class frmCursoDisciplinacs : Form
     {
         DisciplinaDAO disciplinaDAO = new DisciplinaDAO();
+        CursoDAO cursoDAO = new CursoDAO();
 
         public frmCursoDisciplinacs()
         {
             InitializeComponent();
-           // lsDisciplinas.Items.AddRange(disciplinaDAO.Listbox());
+
+            cbDisciplinas.DataSource = disciplinaDAO.PreencherComboBox();
+            cbDisciplinas.DisplayMember = "Nome";
+            cbDisciplinas.ValueMember = "Id";
+
+            cbxCursos.DataSource = cursoDAO.PreencherComboBox();
+            cbxCursos.DisplayMember = "Nome";
+            cbxCursos.ValueMember = "Id";
+  
 
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lsCurso_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnadd_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void cbxCursos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
