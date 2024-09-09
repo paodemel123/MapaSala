@@ -1,4 +1,5 @@
 ﻿using MapaSala.DAO;
+using Model.Entitidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,6 +30,14 @@ namespace MapaSala.Formularios
             cbxCursos.ValueMember = "Id";
   
 
+        }
+        private void btnAdicionar_Click(object sender, System.EventArgs e)
+        {
+            CursoDisplinaDAO cursoDisplinaDAO = new CursoDisplinaDAO();
+            CursoDisciplinaEntidade entidade = new CursoDisciplinaEntidade();
+            entidade.CursoId = Convert.ToInt32(cbxCursos.SelectedValue);
+            entidade.Periodo = cbPeriodos.SelectedValue.ToString();
+            cursoDisplinaDAO.Inserir(entidade);
         }
 
        
