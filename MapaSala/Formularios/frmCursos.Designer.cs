@@ -41,12 +41,15 @@ namespace MapaSala.Formularios
             this.label1 = new System.Windows.Forms.Label();
             this.numId = new System.Windows.Forms.NumericUpDown();
             this.chkativo = new System.Windows.Forms.CheckBox();
+            this.txtPesquisar = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridCursos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numId)).BeginInit();
             this.SuspendLayout();
             // 
             // btneditar
             // 
+            this.btneditar.BackColor = System.Drawing.Color.LightCoral;
             this.btneditar.Font = new System.Drawing.Font("Microsoft JhengHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneditar.Location = new System.Drawing.Point(804, 91);
             this.btneditar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -54,53 +57,56 @@ namespace MapaSala.Formularios
             this.btneditar.Size = new System.Drawing.Size(113, 31);
             this.btneditar.TabIndex = 21;
             this.btneditar.Text = "Editar";
-            this.btneditar.UseVisualStyleBackColor = true;
+            this.btneditar.UseVisualStyleBackColor = false;
             this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
             // btnexcluir
             // 
+            this.btnexcluir.BackColor = System.Drawing.Color.LightCoral;
             this.btnexcluir.Location = new System.Drawing.Point(928, 49);
             this.btnexcluir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnexcluir.Name = "btnexcluir";
             this.btnexcluir.Size = new System.Drawing.Size(113, 31);
             this.btnexcluir.TabIndex = 20;
             this.btnexcluir.Text = "Excluir";
-            this.btnexcluir.UseVisualStyleBackColor = true;
+            this.btnexcluir.UseVisualStyleBackColor = false;
             this.btnexcluir.Click += new System.EventHandler(this.btnexcluir_Click);
             // 
             // btnLimpar
             // 
+            this.btnLimpar.BackColor = System.Drawing.Color.LightCoral;
             this.btnLimpar.Location = new System.Drawing.Point(804, 49);
             this.btnLimpar.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(113, 31);
             this.btnLimpar.TabIndex = 19;
             this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.UseVisualStyleBackColor = false;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // dtGridCursos
             // 
             this.dtGridCursos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtGridCursos.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dtGridCursos.BackgroundColor = System.Drawing.Color.Pink;
             this.dtGridCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtGridCursos.Location = new System.Drawing.Point(63, 143);
+            this.dtGridCursos.Location = new System.Drawing.Point(62, 174);
             this.dtGridCursos.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.dtGridCursos.Name = "dtGridCursos";
             this.dtGridCursos.RowHeadersWidth = 51;
-            this.dtGridCursos.Size = new System.Drawing.Size(951, 394);
+            this.dtGridCursos.Size = new System.Drawing.Size(816, 300);
             this.dtGridCursos.TabIndex = 18;
             this.dtGridCursos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridCursos_CellClick);
             // 
             // btnSalvar
             // 
+            this.btnSalvar.BackColor = System.Drawing.Color.LightCoral;
             this.btnSalvar.Location = new System.Drawing.Point(679, 49);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(112, 31);
             this.btnSalvar.TabIndex = 17;
             this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // label3
@@ -170,11 +176,29 @@ namespace MapaSala.Formularios
             this.chkativo.UseVisualStyleBackColor = true;
             this.chkativo.CheckedChanged += new System.EventHandler(this.chkIsLab_CheckedChanged);
             // 
+            // txtPesquisar
+            // 
+            this.txtPesquisar.AutoSize = true;
+            this.txtPesquisar.Location = new System.Drawing.Point(60, 124);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(69, 16);
+            this.txtPesquisar.TabIndex = 23;
+            this.txtPesquisar.Text = "Pesquisar";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(63, 143);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(325, 22);
+            this.textBox1.TabIndex = 24;
+            // 
             // frmCursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPesquisar);
             this.Controls.Add(this.chkativo);
             this.Controls.Add(this.btneditar);
             this.Controls.Add(this.btnexcluir);
@@ -188,7 +212,7 @@ namespace MapaSala.Formularios
             this.Controls.Add(this.label1);
             this.Controls.Add(this.numId);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCursos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -214,5 +238,7 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown numId;
         private System.Windows.Forms.CheckBox chkativo;
+        private System.Windows.Forms.Label txtPesquisar;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

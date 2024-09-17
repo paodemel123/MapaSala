@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MapaSala.DAO;
 using Model.Entitidades;
 
 namespace MapaSala.Formularios
@@ -14,6 +15,7 @@ namespace MapaSala.Formularios
     public partial class frmSalas : Form
     {
         DataTable dados;
+        SalasDAO dao = new SalasDAO();
         int LinhaSelecionada;
         public frmSalas()
         {
@@ -25,11 +27,9 @@ namespace MapaSala.Formularios
                 dados.Columns.Add(atributos.Name);
             }
 
-            dados.Rows.Add(1, "22", "10", "10", true, false);
-            dados.Rows.Add(3, "23", "10", "10", false, false);
-            dados.Rows.Add(2, "05", "20", "20", true, true);
+           
 
-            dtGridSalas.DataSource = dados;
+            dtGridSalas.DataSource = dao.ObterSalas();
         }
 
         private void frmSalas_Load(object sender, EventArgs e)
@@ -46,10 +46,11 @@ namespace MapaSala.Formularios
             d.NumeroComputadores = Convert.ToInt32(txtNumPc.Value);
             d.IsLab = chkIsLab.Checked;
             d.Disponivel = chkDisponivel.Checked;
-
-
-
-            dados.Rows.Add(d.Linha());
+            
+            dao.Inserir(d);
+            dtGridSalas.DataSource = dao.ObterSalas();
+           
+            
             LimparCampos();
         }
         private void LimparCampos()
@@ -105,5 +106,11 @@ namespace MapaSala.Formularios
             numId.Value = Convert.ToInt32(dtGridSalas.Rows[LinhaSelecionada].Cells[0].Value);
 
         }
+
+        private void txtPesquisar_TextChanged(object sender, EventArgs e)
+        {
+            dtGridSalas.DataSource = dao.Pesquisar(txtPesquisar.Text);
+        }
     }
-}
+    }
+
