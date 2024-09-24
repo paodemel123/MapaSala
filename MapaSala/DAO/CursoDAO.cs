@@ -26,7 +26,7 @@ namespace MapaSala.DAO
             SqlCommand comando = new SqlCommand(query, Conexao);
             SqlParameter parametro2 = new SqlParameter("@nome", curso.Nome);
             SqlParameter parametro3 = new SqlParameter("@turno", curso.Turno);
-            SqlParameter parametro4 = new SqlParameter("@sigla", curso.sSigla);
+            SqlParameter parametro4 = new SqlParameter("@sigla", curso.Sigla);
             SqlParameter parametro5 = new SqlParameter("@ativo", curso.Ativo);
 
             comando.Parameters.Add(parametro2);
