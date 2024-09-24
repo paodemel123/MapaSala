@@ -71,15 +71,17 @@ namespace MapaSala.Formularios
             // 
             // btnadd
             // 
+            this.btnadd.BackColor = System.Drawing.Color.LightPink;
             this.btnadd.Location = new System.Drawing.Point(28, 127);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(75, 23);
             this.btnadd.TabIndex = 5;
             this.btnadd.Text = "Adicionar";
-            this.btnadd.UseVisualStyleBackColor = true;
+            this.btnadd.UseVisualStyleBackColor = false;
             // 
             // dtCursoDisciplina
             // 
+            this.dtCursoDisciplina.BackgroundColor = System.Drawing.Color.Pink;
             this.dtCursoDisciplina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtCursoDisciplina.Location = new System.Drawing.Point(28, 174);
             this.dtCursoDisciplina.Name = "dtCursoDisciplina";

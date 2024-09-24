@@ -16,25 +16,19 @@ namespace MapaSala.Formularios
     {
         DataTable dados;
         SalasDAO dao = new SalasDAO();
+
         int LinhaSelecionada;
         public frmSalas()
         {
             InitializeComponent();
-            dados = new DataTable();
 
-            foreach (var atributos in typeof(SalasEntidade).GetProperties())
-            {
-                dados.Columns.Add(atributos.Name);
-            }
-
-           
 
             dtGridSalas.DataSource = dao.ObterSalas();
         }
 
         private void frmSalas_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -46,11 +40,9 @@ namespace MapaSala.Formularios
             d.NumeroComputadores = Convert.ToInt32(txtNumPc.Value);
             d.IsLab = chkIsLab.Checked;
             d.Disponivel = chkDisponivel.Checked;
-            
+
             dao.Inserir(d);
             dtGridSalas.DataSource = dao.ObterSalas();
-           
-            
             LimparCampos();
         }
         private void LimparCampos()
@@ -61,7 +53,7 @@ namespace MapaSala.Formularios
             txtNumCadeira.Text = "";
             chkIsLab.Checked = false;
             chkDisponivel.Checked = false;
-             
+
         }
 
 
@@ -112,5 +104,4 @@ namespace MapaSala.Formularios
             dtGridSalas.DataSource = dao.Pesquisar(txtPesquisar.Text);
         }
     }
-    }
-
+}

@@ -30,6 +30,11 @@ namespace MapaSala.DAO
             SqlParameter parametro5 = new SqlParameter("@disponivel", sala.Disponivel);
             comando.Parameters.Add(parametro1);
             comando.Parameters.Add(parametro2);
+            comando.Parameters.Add(parametro3);
+            comando.Parameters.Add(parametro4);
+            comando.Parameters.Add(parametro5);
+
+
             comando.ExecuteNonQuery(); //nao retorna nd
             Conexao.Close();
         }
@@ -37,7 +42,7 @@ namespace MapaSala.DAO
         {
             DataTable dt = new DataTable();
             Conexao.Open();
-            string query = "SELECT Nome , Turno, Sigla, Ativo FROM Cursos Order by Id desc";
+            string query = "SELECT * FROM Salas ORDER BY Id desc";
             SqlCommand Comando = new SqlCommand(query, Conexao);
 
 
@@ -71,11 +76,11 @@ namespace MapaSala.DAO
             string query = "";
             if (string.IsNullOrEmpty(pesquisa))
             {
-                query = "SELECT * FROM SALAS ORDER BY ID desc";
+                query = "SELECT * FROM Salas ORDER BY Id desc";
             }
             else
             {
-                query = "SELECT * FROM SALAS WHERE NOME LIKE '%" + pesquisa + "%' ORDER BY ID desc"; //concatenação
+                query = "SELECT * FROM Salas WHERE NOME LIKE '%" + pesquisa + "%' ORDER BY ID desc"; //concatenação
             }
 
             SqlCommand Comando = new SqlCommand(query, Conexao);
@@ -85,7 +90,7 @@ namespace MapaSala.DAO
             {
                 dt.Columns.Add(atributos.Name);
             }
-            if (Leitura.HasRows) //a linha existe? true or false
+            if (Leitura.HasRows)
             {
                 while (Leitura.Read())
                 {
