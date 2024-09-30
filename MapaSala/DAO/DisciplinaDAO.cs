@@ -8,7 +8,6 @@ using System.Data.SqlClient;
 using Model.Entitidades;
 using System.Data;
 
-
 namespace MapaSala.DAO
 {
     public class DisciplinaDAO

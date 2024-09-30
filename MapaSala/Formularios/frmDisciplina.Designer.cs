@@ -180,6 +180,7 @@ namespace MapaSala.Formularios
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(464, 23);
             this.txtPesquisar.TabIndex = 12;
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged_1);
             // 
             // frmDisciplina
             // 

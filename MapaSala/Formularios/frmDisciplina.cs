@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MapaSala.DAO;
 using Model.Entitidades;
 
 namespace MapaSala.Formularios
@@ -15,24 +16,22 @@ namespace MapaSala.Formularios
     public partial class frmDisciplina : Form
     {
         DataTable dados;
+        DisciplinaDAO dao = new DisciplinaDAO();
         int LinhaSelecionada;
 
         public frmDisciplina()
         {
             InitializeComponent();
             dados = new DataTable();
-            
+
             foreach (var atributos in typeof(DisciplinaEntidade).GetProperties())
             {
                 dados.Columns.Add(atributos.Name);
             }
 
-            dados.Rows.Add(1, "Matematica", "MAT");
-            dados.Rows.Add(2, "Português", "PORT");
-            dados.Rows.Add(3, "Física", "FIS");
 
-            dtGridDisciplina.DataSource = dados;
-            
+            dtGridDisciplina.DataSource = dao.ObterDisciplinas();
+
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -42,13 +41,14 @@ namespace MapaSala.Formularios
             d.Nome = txtNomeDisciplina.Text;
             d.Sigla = txtSigla.Text;
 
-            dados.Rows.Add(d.Linha());
+            dao.Inserir(d);
+            dtGridDisciplina.DataSource = dao.ObterDisciplinas();
             LimparCampos();
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            LimparCampos(); 
+            LimparCampos();
         }
 
         private void LimparCampos()
@@ -86,6 +86,17 @@ namespace MapaSala.Formularios
             editar.Cells[2].Value = txtSigla.Text;
 
 
+        }
+
+        private void txtPesquisar_TextChanged(object sender, EventArgs e)
+        {
+            dtGridDisciplina.DataSource = dao.Pesquisar(txtPesquisar.Text);
+
+        }
+
+        private void txtPesquisar_TextChanged_1(object sender, EventArgs e)
+        {
+            dtGridDisciplina.DataSource = dao.Pesquisar(txtPesquisar.Text);
         }
     }
 }
