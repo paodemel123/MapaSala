@@ -15,6 +15,7 @@ namespace MapaSala.DAO
         private string LinhaConexao = "Server=LS05MPF;Database=AULA_DS;User Id=sa;Password=admsasql;";// link do site
         private SqlConnection Conexao; //comunicacao programa/banco
 
+
         public ProfessoresDAO()
         {
             Conexao = new SqlConnection(LinhaConexao);
@@ -35,7 +36,7 @@ namespace MapaSala.DAO
         {
             DataTable dt = new DataTable();
             Conexao.Open();
-            string query = "SELECT * FROM PROFESSORES ORDER BY Id desc";
+            string query = "SELECT Id, Nome, Apelido FROM PROFESSORES ORDER BY Id desc";
             SqlCommand Comando = new SqlCommand(query, Conexao);
 
 
@@ -67,13 +68,13 @@ namespace MapaSala.DAO
             string query = "";
             if (string.IsNullOrEmpty(pesquisa))
             {
-             query = "SELECT * FROM PROFESSORES ORDER BY ID desc";
+                query = "SELECT * FROM PROFESSORES ORDER BY ID desc";
             }
             else
             {
-             query = "SELECT * FROM PROFESSORES WHERE NOME LIKE '%"+pesquisa+"%' ORDER BY ID desc"; //concatenação
+                query = "SELECT * FROM PROFESSORES WHERE NOME LIKE '%" + pesquisa + "%' ORDER BY ID desc"; //concatenação
             }
-            
+
             SqlCommand Comando = new SqlCommand(query, Conexao);
             SqlDataReader Leitura = Comando.ExecuteReader();
 
