@@ -35,7 +35,7 @@ namespace MapaSala.DAO
             comando.Parameters.Add(parametro5);
 
 
-            comando.ExecuteNonQuery(); //nao retorna nd
+            comando.ExecuteNonQuery(); 
             Conexao.Close();
         }
         public DataTable ObterSalas()
@@ -76,11 +76,11 @@ namespace MapaSala.DAO
             string query = "";
             if (string.IsNullOrEmpty(pesquisa))
             {
-                query = "SELECT * FROM Salas ORDER BY Id desc";
+                query = "SELECT Id, Nome, NumeroCadeiras, NumeroComputadores, Disponivel FROM Salas ORDER BY Id desc";
             }
             else
             {
-                query = "SELECT * FROM Salas WHERE NOME LIKE '%" + pesquisa + "%' ORDER BY ID desc"; //concatenação
+                query = "SELECT  Id, Nome, NumeroCadeiras, NumeroComputadores, Disponivel FROM Salas WHERE NOME LIKE '%" + pesquisa + "%' ORDER BY ID desc"; 
             }
 
             SqlCommand Comando = new SqlCommand(query, Conexao);

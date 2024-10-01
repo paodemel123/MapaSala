@@ -42,7 +42,7 @@ namespace MapaSala.Formularios
             this.numId = new System.Windows.Forms.NumericUpDown();
             this.chkativo = new System.Windows.Forms.CheckBox();
             this.txtPesquisar = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPesquisa = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridCursos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numId)).BeginInit();
             this.SuspendLayout();
@@ -115,7 +115,7 @@ namespace MapaSala.Formularios
             this.label3.Location = new System.Drawing.Point(322, 47);
             this.label3.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 16);
+            this.label3.Size = new System.Drawing.Size(43, 16);
             this.label3.TabIndex = 16;
             this.label3.Text = "Turno";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -134,7 +134,7 @@ namespace MapaSala.Formularios
             this.label2.Location = new System.Drawing.Point(168, 47);
             this.label2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
+            this.label2.Size = new System.Drawing.Size(45, 16);
             this.label2.TabIndex = 14;
             this.label2.Text = "Nome";
             // 
@@ -152,7 +152,7 @@ namespace MapaSala.Formularios
             this.label1.Location = new System.Drawing.Point(16, 47);
             this.label1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 16);
+            this.label1.Size = new System.Drawing.Size(19, 16);
             this.label1.TabIndex = 12;
             this.label1.Text = "Id";
             // 
@@ -170,7 +170,7 @@ namespace MapaSala.Formularios
             this.chkativo.Location = new System.Drawing.Point(479, 71);
             this.chkativo.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.chkativo.Name = "chkativo";
-            this.chkativo.Size = new System.Drawing.Size(56, 20);
+            this.chkativo.Size = new System.Drawing.Size(57, 20);
             this.chkativo.TabIndex = 22;
             this.chkativo.Text = "Ativo";
             this.chkativo.UseVisualStyleBackColor = true;
@@ -181,23 +181,24 @@ namespace MapaSala.Formularios
             this.txtPesquisar.AutoSize = true;
             this.txtPesquisar.Location = new System.Drawing.Point(13, 124);
             this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(68, 16);
+            this.txtPesquisar.Size = new System.Drawing.Size(69, 16);
             this.txtPesquisar.TabIndex = 23;
             this.txtPesquisar.Text = "Pesquisar";
             // 
-            // textBox1
+            // txtPesquisa
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 143);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(325, 22);
-            this.textBox1.TabIndex = 24;
+            this.txtPesquisa.Location = new System.Drawing.Point(16, 143);
+            this.txtPesquisa.Name = "txtPesquisa";
+            this.txtPesquisa.Size = new System.Drawing.Size(325, 22);
+            this.txtPesquisa.TabIndex = 24;
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
             // 
             // frmCursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPesquisa);
             this.Controls.Add(this.txtPesquisar);
             this.Controls.Add(this.chkativo);
             this.Controls.Add(this.btneditar);
@@ -239,6 +240,6 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.NumericUpDown numId;
         private System.Windows.Forms.CheckBox chkativo;
         private System.Windows.Forms.Label txtPesquisar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPesquisa;
     }
 }
