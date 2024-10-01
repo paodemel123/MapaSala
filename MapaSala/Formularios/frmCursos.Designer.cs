@@ -43,6 +43,8 @@ namespace MapaSala.Formularios
             this.chkativo = new System.Windows.Forms.CheckBox();
             this.txtPesquisar = new System.Windows.Forms.Label();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
+            this.txtSigla = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridCursos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numId)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +53,7 @@ namespace MapaSala.Formularios
             // 
             this.btneditar.BackColor = System.Drawing.Color.LightCoral;
             this.btneditar.Font = new System.Drawing.Font("Microsoft JhengHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneditar.Location = new System.Drawing.Point(799, 61);
+            this.btneditar.Location = new System.Drawing.Point(941, 64);
             this.btneditar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btneditar.Name = "btneditar";
             this.btneditar.Size = new System.Drawing.Size(113, 31);
@@ -63,7 +65,7 @@ namespace MapaSala.Formularios
             // btnexcluir
             // 
             this.btnexcluir.BackColor = System.Drawing.Color.LightCoral;
-            this.btnexcluir.Location = new System.Drawing.Point(678, 99);
+            this.btnexcluir.Location = new System.Drawing.Point(817, 117);
             this.btnexcluir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnexcluir.Name = "btnexcluir";
             this.btnexcluir.Size = new System.Drawing.Size(113, 31);
@@ -75,7 +77,7 @@ namespace MapaSala.Formularios
             // btnLimpar
             // 
             this.btnLimpar.BackColor = System.Drawing.Color.LightCoral;
-            this.btnLimpar.Location = new System.Drawing.Point(675, 60);
+            this.btnLimpar.Location = new System.Drawing.Point(817, 64);
             this.btnLimpar.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(113, 31);
@@ -100,7 +102,7 @@ namespace MapaSala.Formularios
             // btnSalvar
             // 
             this.btnSalvar.BackColor = System.Drawing.Color.LightCoral;
-            this.btnSalvar.Location = new System.Drawing.Point(549, 60);
+            this.btnSalvar.Location = new System.Drawing.Point(691, 64);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(112, 31);
@@ -167,7 +169,7 @@ namespace MapaSala.Formularios
             // chkativo
             // 
             this.chkativo.AutoSize = true;
-            this.chkativo.Location = new System.Drawing.Point(479, 71);
+            this.chkativo.Location = new System.Drawing.Point(614, 71);
             this.chkativo.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.chkativo.Name = "chkativo";
             this.chkativo.Size = new System.Drawing.Size(57, 20);
@@ -193,11 +195,29 @@ namespace MapaSala.Formularios
             this.txtPesquisa.TabIndex = 24;
             this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
             // 
+            // txtSigla
+            // 
+            this.txtSigla.Location = new System.Drawing.Point(484, 69);
+            this.txtSigla.Name = "txtSigla";
+            this.txtSigla.Size = new System.Drawing.Size(120, 22);
+            this.txtSigla.TabIndex = 25;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(481, 47);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(39, 16);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "Sigla";
+            // 
             // frmCursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtSigla);
             this.Controls.Add(this.txtPesquisa);
             this.Controls.Add(this.txtPesquisar);
             this.Controls.Add(this.chkativo);
@@ -241,5 +261,7 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.CheckBox chkativo;
         private System.Windows.Forms.Label txtPesquisar;
         private System.Windows.Forms.TextBox txtPesquisa;
+        private System.Windows.Forms.TextBox txtSigla;
+        private System.Windows.Forms.Label label4;
     }
 }

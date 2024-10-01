@@ -11,8 +11,8 @@ namespace MapaSala.DAO
 {
     public class CursoDAO
     {
-        private string LinhaConexao = "Server=LS05MPF;Database=AULA_DS;User Id=sa;Password=admsasql;";
-        private SqlConnection Conexao; 
+        private string LinhaConexao = "Server=LS05MPF;Database=AULA_DS;User Id=sa;Password=admsasql;";// link do site
+        private SqlConnection Conexao; //comunicacao programa/banco
 
         public CursoDAO()
         {
@@ -32,7 +32,7 @@ namespace MapaSala.DAO
             comando.Parameters.Add(parametro3);
             comando.Parameters.Add(parametro4);
             comando.Parameters.Add(parametro5);
-            comando.ExecuteNonQuery(); 
+            comando.ExecuteNonQuery(); //nao retorna nd
             Conexao.Close();
         }
         public DataTable PreencherComboBox()
@@ -47,12 +47,12 @@ namespace MapaSala.DAO
 
                 try
                 {
-                    
+                    // Preenche o DataTable com os dados da consulta
                     adapter.Fill(dataTable);
                 }
                 catch (Exception ex)
                 {
-                    
+                    // Lida com erros, se necessário
                     throw new Exception("Erro ao acessar os dados: " + ex.Message);
                 }
             }
@@ -70,13 +70,13 @@ namespace MapaSala.DAO
 
             SqlDataReader Leitura = Comando.ExecuteReader();
 
-            foreach (var atributos in typeof(cursoEntidades).GetProperties())
+            foreach (var atributos in typeof(cursoEntidades).GetProperties())//laço de reoetição para ler listas
             {
                 dt.Columns.Add(atributos.Name);
             }
-            if (Leitura.HasRows) 
+            if (Leitura.HasRows) //a linha existe? true or false
             {
-                while (Leitura.Read())
+                while (Leitura.Read())//para pegar mais de um registro, faz uma consulta
                 {
                     cursoEntidades curso = new cursoEntidades();
                     curso.Id = Convert.ToInt32(Leitura[0]);
@@ -102,19 +102,19 @@ namespace MapaSala.DAO
             }
             else
             {
-                query = "SELECT Id, Nome, Turno, Sigla, Ativo FROM Cursos WHERE NOME LIKE '%" + pesquisa + "%' ORDER BY ID desc"; 
+                query = "SELECT Id, Nome, Turno, Sigla, Ativo FROM Cursos WHERE NOME LIKE '%" + pesquisa + "%' ORDER BY ID desc"; //concatenação
             }
 
             SqlCommand Comando = new SqlCommand(query, Conexao);
             SqlDataReader Leitura = Comando.ExecuteReader();
 
-            foreach (var atributos in typeof(cursoEntidades).GetProperties())
+            foreach (var atributos in typeof(cursoEntidades).GetProperties())//laço de reoetição para ler listas
             {
                 dt.Columns.Add(atributos.Name);
             }
-            if (Leitura.HasRows) 
+            if (Leitura.HasRows) //a linha existe? true or false
             {
-                while (Leitura.Read())
+                while (Leitura.Read())//para pegar mais de um registro, faz uma consulta
                 {
                     cursoEntidades curso = new cursoEntidades();
                     curso.Id = Convert.ToInt32(Leitura[0]);

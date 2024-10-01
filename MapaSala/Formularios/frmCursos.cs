@@ -15,24 +15,14 @@ namespace MapaSala.Formularios
     public partial class frmCursos : Form
     {
         CursoDAO dao = new CursoDAO();
-        DataTable dados;
         int LinhaSelecionada;
         public frmCursos()
         {
-           
+
             InitializeComponent();
-            dados = new DataTable();
-            foreach (var atributos in typeof(cursoEntidades).GetProperties())
-            {
-                dados.Columns.Add(atributos.Name);
-            }
 
-            dados.Rows.Add(1, "desenvolvimento de sistemas", "manha", true);
-            dados.Rows.Add(2, "administraçao", "noite", true);
-            dados.Rows.Add(3, "serviços juridicos", "tarde", false);
-            dados.Rows.Add(4, " infonet", "tarde", true);
 
-            dtGridCursos.DataSource = dados;
+            dtGridCursos.DataSource = dao.ObterCurso();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -69,9 +59,11 @@ namespace MapaSala.Formularios
             curso.Id = Convert.ToInt32(numId.Value);
             curso.Nome = txtNome.Text;
             curso.Turno = txtturno.Text;
+            curso.Sigla = txtSigla.Text;
             curso.Ativo = chkativo.Checked;
 
-            dados.Rows.Add(curso.Linha());
+            dao.Inserir(curso);
+            dtGridCursos.DataSource = dao.ObterCurso();
             LimparCampos();
         }
 
@@ -87,7 +79,8 @@ namespace MapaSala.Formularios
             numId.Value = Convert.ToUInt32(dtGridCursos.Rows[LinhaSelecionada].Cells[0].Value);
             txtNome.Text = dtGridCursos.Rows[LinhaSelecionada].Cells[1].Value.ToString();
             txtturno.Text = dtGridCursos.Rows[LinhaSelecionada].Cells[2].Value.ToString();
-            chkativo.Checked = Convert.ToBoolean(dtGridCursos.Rows[LinhaSelecionada].Cells[3].Value);
+            txtSigla.Text = dtGridCursos.Rows[LinhaSelecionada].Cells[3].Value.ToString();
+            chkativo.Checked = Convert.ToBoolean(dtGridCursos.Rows[LinhaSelecionada].Cells[4].Value);
         }
 
         private void btneditar_Click(object sender, EventArgs e)
@@ -104,5 +97,4 @@ namespace MapaSala.Formularios
             dtGridCursos.DataSource = dao.Pesquisar(txtPesquisa.Text);
         }
     }
-
 }
