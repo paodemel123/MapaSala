@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MapaSala.DAO;
+using MapaSala.Formularios.Editar;
 using Model.Entitidades;
 
 namespace MapaSala.Formularios
@@ -97,6 +98,13 @@ namespace MapaSala.Formularios
         private void txtPesquisar_TextChanged_1(object sender, EventArgs e)
         {
             dtGridDisciplina.DataSource = dao.Pesquisar(txtPesquisar.Text);
+        }
+
+        private void dtGridDisciplina_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmEditarDisciplina editar = new frmEditarDisciplina();
+            editar.ShowDialog();
+
         }
     }
 }

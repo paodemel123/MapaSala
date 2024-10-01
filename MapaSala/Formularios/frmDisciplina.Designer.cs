@@ -42,6 +42,7 @@ namespace MapaSala.Formularios
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPesquisar = new System.Windows.Forms.TextBox();
+            this.chkativo = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.numId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridDisciplina)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +50,7 @@ namespace MapaSala.Formularios
             // btnSalvar
             // 
             this.btnSalvar.BackColor = System.Drawing.Color.Pink;
-            this.btnSalvar.Location = new System.Drawing.Point(629, 41);
+            this.btnSalvar.Location = new System.Drawing.Point(689, 38);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(5);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(99, 35);
@@ -128,11 +129,12 @@ namespace MapaSala.Formularios
             this.dtGridDisciplina.Size = new System.Drawing.Size(976, 494);
             this.dtGridDisciplina.TabIndex = 7;
             this.dtGridDisciplina.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridDisciplina_CellClick);
+            this.dtGridDisciplina.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridDisciplina_CellDoubleClick);
             // 
             // btnLimpar
             // 
             this.btnLimpar.BackColor = System.Drawing.Color.Pink;
-            this.btnLimpar.Location = new System.Drawing.Point(736, 40);
+            this.btnLimpar.Location = new System.Drawing.Point(800, 92);
             this.btnLimpar.Margin = new System.Windows.Forms.Padding(5);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(99, 35);
@@ -144,7 +146,7 @@ namespace MapaSala.Formularios
             // btnExcluir
             // 
             this.btnExcluir.BackColor = System.Drawing.Color.Pink;
-            this.btnExcluir.Location = new System.Drawing.Point(846, 40);
+            this.btnExcluir.Location = new System.Drawing.Point(798, 39);
             this.btnExcluir.Margin = new System.Windows.Forms.Padding(5);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(101, 35);
@@ -156,7 +158,7 @@ namespace MapaSala.Formularios
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Pink;
-            this.button1.Location = new System.Drawing.Point(959, 40);
+            this.button1.Location = new System.Drawing.Point(909, 40);
             this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 35);
@@ -182,11 +184,22 @@ namespace MapaSala.Formularios
             this.txtPesquisar.TabIndex = 12;
             this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged_1);
             // 
+            // chkativo
+            // 
+            this.chkativo.AutoSize = true;
+            this.chkativo.Location = new System.Drawing.Point(623, 46);
+            this.chkativo.Name = "chkativo";
+            this.chkativo.Size = new System.Drawing.Size(58, 21);
+            this.chkativo.TabIndex = 13;
+            this.chkativo.Text = "Ativo";
+            this.chkativo.UseVisualStyleBackColor = true;
+            // 
             // frmDisciplina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1066, 692);
+            this.Controls.Add(this.chkativo);
             this.Controls.Add(this.txtPesquisar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
@@ -228,5 +241,6 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtPesquisar;
+        private System.Windows.Forms.CheckBox chkativo;
     }
 }
