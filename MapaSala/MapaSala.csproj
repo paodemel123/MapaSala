@@ -58,6 +58,12 @@
     <Compile Include="Formularios\Editar\frmEditarDisciplina.Designer.cs">
       <DependentUpon>frmEditarDisciplina.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Editar\FrmNovoDisciplina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Editar\FrmNovoDisciplina.Designer.cs">
+      <DependentUpon>FrmNovoDisciplina.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmCursoDisciplinacs.cs">
       <SubType>Form</SubType>
     </Compile>

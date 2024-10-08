@@ -32,10 +32,11 @@ namespace MapaSala.Formularios.Editar
             this.txtNomeDisciplina = new System.Windows.Forms.TextBox();
             this.txtSigla = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Salvar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label_id = new System.Windows.Forms.Label();
+            this.btn_Excluir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtNomeDisciplina
@@ -57,22 +58,23 @@ namespace MapaSala.Formularios.Editar
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(95, 220);
+            this.checkBox1.Location = new System.Drawing.Point(93, 218);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(50, 17);
             this.checkBox1.TabIndex = 3;
             this.checkBox1.Text = "Ativo";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_Salvar
             // 
-            this.button1.BackColor = System.Drawing.Color.Pink;
-            this.button1.Location = new System.Drawing.Point(81, 275);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Salvar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_Salvar.BackColor = System.Drawing.Color.Pink;
+            this.btn_Salvar.Location = new System.Drawing.Point(15, 275);
+            this.btn_Salvar.Name = "btn_Salvar";
+            this.btn_Salvar.Size = new System.Drawing.Size(75, 23);
+            this.btn_Salvar.TabIndex = 4;
+            this.btn_Salvar.Text = "Salvar";
+            this.btn_Salvar.UseVisualStyleBackColor = false;
+            this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click_1);
             // 
             // label1
             // 
@@ -95,21 +97,33 @@ namespace MapaSala.Formularios.Editar
             // label_id
             // 
             this.label_id.AutoSize = true;
-            this.label_id.Location = new System.Drawing.Point(9, 28);
+            this.label_id.Location = new System.Drawing.Point(12, 33);
             this.label_id.Name = "label_id";
             this.label_id.Size = new System.Drawing.Size(16, 13);
             this.label_id.TabIndex = 7;
             this.label_id.Text = "Id";
+            // 
+            // btn_Excluir
+            // 
+            this.btn_Excluir.BackColor = System.Drawing.Color.Pink;
+            this.btn_Excluir.Location = new System.Drawing.Point(143, 275);
+            this.btn_Excluir.Name = "btn_Excluir";
+            this.btn_Excluir.Size = new System.Drawing.Size(75, 23);
+            this.btn_Excluir.TabIndex = 8;
+            this.btn_Excluir.Text = "Excluir";
+            this.btn_Excluir.UseVisualStyleBackColor = false;
+            this.btn_Excluir.Click += new System.EventHandler(this.btn_Excluir_Click_1);
             // 
             // frmEditarDisciplina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(395, 450);
+            this.Controls.Add(this.btn_Excluir);
             this.Controls.Add(this.label_id);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_Salvar);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.txtSigla);
             this.Controls.Add(this.txtNomeDisciplina);
@@ -125,9 +139,10 @@ namespace MapaSala.Formularios.Editar
         private System.Windows.Forms.TextBox txtNomeDisciplina;
         private System.Windows.Forms.TextBox txtSigla;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Salvar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label_id;
+        private System.Windows.Forms.Button btn_Excluir;
     }
 }
