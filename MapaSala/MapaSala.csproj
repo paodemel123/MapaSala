@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Usuarios.cs" />
     <Compile Include="DAO\CursoDAO.cs" />
     <Compile Include="DAO\CursoDisciplinasDAO.cs" />
     <Compile Include="DAO\DisciplinaDAO.cs" />
@@ -63,6 +64,12 @@
     </Compile>
     <Compile Include="Formularios\Editar\FrmNovoDisciplina.Designer.cs">
       <DependentUpon>FrmNovoDisciplina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmCadastrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmCadastrarUsuario.Designer.cs">
+      <DependentUpon>FrmCadastrarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmCursoDisciplinacs.cs">
       <SubType>Form</SubType>
@@ -110,6 +117,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\Editar\frmEditarDisciplina.resx">
       <DependentUpon>frmEditarDisciplina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmCadastrarUsuario.resx">
+      <DependentUpon>FrmCadastrarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmCursoDisciplinacs.resx">
       <DependentUpon>frmCursoDisciplinacs.cs</DependentUpon>
