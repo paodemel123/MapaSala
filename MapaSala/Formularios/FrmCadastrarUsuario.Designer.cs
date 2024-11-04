@@ -1,7 +1,7 @@
 ﻿
 namespace MapaSala.Formularios
 {
-    partial class FrmCadastrarUsuario
+    partial class frmCadastrarUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -30,24 +30,24 @@ namespace MapaSala.Formularios
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnCadastro = new System.Windows.Forms.Button();
+            this.chkAtivo = new System.Windows.Forms.CheckBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtLogin = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.btnCadastro = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnCadastro);
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.chkAtivo);
+            this.groupBox1.Controls.Add(this.txtSenha);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtLogin);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(399, 278);
@@ -55,22 +55,31 @@ namespace MapaSala.Formularios
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cadastrar Usuário";
             // 
-            // checkBox1
+            // btnCadastro
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(52, 180);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(50, 17);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "Ativo";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.btnCadastro.Location = new System.Drawing.Point(50, 232);
+            this.btnCadastro.Name = "btnCadastro";
+            this.btnCadastro.Size = new System.Drawing.Size(75, 23);
+            this.btnCadastro.TabIndex = 8;
+            this.btnCadastro.Text = "Cadastrar";
+            this.btnCadastro.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // chkAtivo
             // 
-            this.textBox2.Location = new System.Drawing.Point(25, 123);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(180, 20);
-            this.textBox2.TabIndex = 4;
+            this.chkAtivo.AutoSize = true;
+            this.chkAtivo.Location = new System.Drawing.Point(52, 180);
+            this.chkAtivo.Name = "chkAtivo";
+            this.chkAtivo.Size = new System.Drawing.Size(50, 17);
+            this.chkAtivo.TabIndex = 7;
+            this.chkAtivo.Text = "Ativo";
+            this.chkAtivo.UseVisualStyleBackColor = true;
+            // 
+            // txtSenha
+            // 
+            this.txtSenha.Location = new System.Drawing.Point(25, 123);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(180, 20);
+            this.txtSenha.TabIndex = 4;
             // 
             // label2
             // 
@@ -90,30 +99,20 @@ namespace MapaSala.Formularios
             this.label1.TabIndex = 1;
             this.label1.Text = "Login";
             // 
-            // textBox1
+            // txtLogin
             // 
-            this.textBox1.Location = new System.Drawing.Point(25, 57);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(180, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtLogin.Location = new System.Drawing.Point(25, 57);
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.Size = new System.Drawing.Size(180, 20);
+            this.txtLogin.TabIndex = 0;
             // 
-            // btnCadastro
-            // 
-            this.btnCadastro.Location = new System.Drawing.Point(50, 232);
-            this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(75, 23);
-            this.btnCadastro.TabIndex = 8;
-            this.btnCadastro.Text = "Cadastrar";
-            this.btnCadastro.UseVisualStyleBackColor = true;
-            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
-            // 
-            // FrmCadastrarUsuario
+            // frmCadastrarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 302);
+            this.ClientSize = new System.Drawing.Size(253, 302);
             this.Controls.Add(this.groupBox1);
-            this.Name = "FrmCadastrarUsuario";
+            this.Name = "frmCadastrarUsuario";
             this.Text = "FrmCadastrarUsuario";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -124,12 +123,12 @@ namespace MapaSala.Formularios
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtLogin;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox chkAtivo;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnCadastro;
     }

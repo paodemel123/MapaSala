@@ -59,11 +59,11 @@
     <Compile Include="Formularios\Editar\frmEditarDisciplina.Designer.cs">
       <DependentUpon>frmEditarDisciplina.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Editar\FrmNovoDisciplina.cs">
+    <Compile Include="Formularios\Editar\FrmEditarUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Editar\FrmNovoDisciplina.Designer.cs">
-      <DependentUpon>FrmNovoDisciplina.cs</DependentUpon>
+    <Compile Include="Formularios\Editar\FrmEditarUsuarios.Designer.cs">
+      <DependentUpon>FrmEditarUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmCadastrarUsuario.cs">
       <SubType>Form</SubType>
@@ -118,6 +118,9 @@
     <EmbeddedResource Include="Formularios\Editar\frmEditarDisciplina.resx">
       <DependentUpon>frmEditarDisciplina.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Editar\FrmEditarUsuarios.resx">
+      <DependentUpon>FrmEditarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmCadastrarUsuario.resx">
       <DependentUpon>FrmCadastrarUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmSalas.resx">
       <DependentUpon>frmSalas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
