@@ -18,7 +18,8 @@ namespace MapaSala.Formularios
             InitializeComponent();
         }
 
-        private void btnCadastrar_Click(object sender, EventArgs e)
+     
+        private void btnCadastro_Click(object sender, EventArgs e)
         {
             Usuarios u = new Usuarios();
             u.Login = txtLogin.Text;

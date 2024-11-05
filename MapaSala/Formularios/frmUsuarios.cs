@@ -56,5 +56,12 @@ namespace MapaSala.Formularios
                 editar.ShowDialog(); // Abre o formulário como um diálogo modal
             }
         }
+
+        private void btnNovo_Click_1(object sender, EventArgs e)
+        {
+            frmCadastrarUsuario frm = new frmCadastrarUsuario();
+            frm.FormClosed += FecharForm;
+            frm.ShowDialog();
+        }
     }
 }

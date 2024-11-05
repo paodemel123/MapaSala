@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnNovo = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtPesquisar = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnNovo = new System.Windows.Forms.Button();
             this.dtgridUsuarios = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgridUsuarios)).BeginInit();
@@ -49,14 +49,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Usuários";
             // 
-            // btnNovo
+            // txtPesquisar
             // 
-            this.btnNovo.Location = new System.Drawing.Point(28, 37);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(75, 23);
-            this.btnNovo.TabIndex = 0;
-            this.btnNovo.Text = "Novo Usuário";
-            this.btnNovo.UseVisualStyleBackColor = true;
+            this.txtPesquisar.Location = new System.Drawing.Point(206, 36);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(333, 20);
+            this.txtPesquisar.TabIndex = 2;
             // 
             // label1
             // 
@@ -67,12 +65,15 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Pesquisar";
             // 
-            // txtPesquisar
+            // btnNovo
             // 
-            this.txtPesquisar.Location = new System.Drawing.Point(206, 36);
-            this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(333, 20);
-            this.txtPesquisar.TabIndex = 2;
+            this.btnNovo.Location = new System.Drawing.Point(28, 37);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(75, 23);
+            this.btnNovo.TabIndex = 0;
+            this.btnNovo.Text = "Novo Usuário";
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click_1);
             // 
             // dtgridUsuarios
             // 

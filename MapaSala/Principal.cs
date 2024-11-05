@@ -25,7 +25,7 @@ namespace MapaSala
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void cadastrosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -62,5 +62,17 @@ namespace MapaSala
             frmCursoDisciplinacs x = new frmCursoDisciplinacs();
             x.ShowDialog();
         }
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsuarios usuarios = new frmUsuarios();
+            usuarios.ShowDialog();
+        }
+
+        private void usuariosToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            frmUsuarios usuarios = new frmUsuarios();
+            usuarios.ShowDialog();
+        }
     }
 }
+

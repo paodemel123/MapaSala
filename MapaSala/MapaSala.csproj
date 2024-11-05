@@ -53,6 +53,12 @@
     <Compile Include="DAO\HorarioDAO.cs" />
     <Compile Include="DAO\ProfessoresDAO.cs" />
     <Compile Include="DAO\SalasDAO.cs" />
+    <Compile Include="Formularios\Cadastrar\FrmCadastrarDisciplina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Cadastrar\FrmCadastrarDisciplina.Designer.cs">
+      <DependentUpon>FrmCadastrarDisciplina.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Editar\frmEditarDisciplina.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,10 +71,10 @@
     <Compile Include="Formularios\Editar\FrmEditarUsuarios.Designer.cs">
       <DependentUpon>FrmEditarUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmCadastrarUsuario.cs">
+    <Compile Include="Formularios\Cadastrar\FrmCadastrarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmCadastrarUsuario.Designer.cs">
+    <Compile Include="Formularios\Cadastrar\FrmCadastrarUsuario.Designer.cs">
       <DependentUpon>FrmCadastrarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmCursoDisciplinacs.cs">
@@ -107,6 +113,12 @@
     <Compile Include="Formularios\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,7 +133,7 @@
     <EmbeddedResource Include="Formularios\Editar\FrmEditarUsuarios.resx">
       <DependentUpon>FrmEditarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmCadastrarUsuario.resx">
+    <EmbeddedResource Include="Formularios\Cadastrar\FrmCadastrarUsuario.resx">
       <DependentUpon>FrmCadastrarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmCursoDisciplinacs.resx">
@@ -141,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
