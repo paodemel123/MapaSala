@@ -63,5 +63,20 @@ namespace MapaSala.Formularios
             frm.FormClosed += FecharForm;
             frm.ShowDialog();
         }
+
+        private void dtgridUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                int id = Convert.ToInt32(
+                    dtgridUsuarios.Rows[e.RowIndex].Cells[0].Value);
+
+                frmEditarUsuarios editar = new frmEditarUsuarios(id);
+
+                // Inscreve-se no evento
+                editar.FormClosed += FecharForm;
+                editar.ShowDialog(); // Abre o formulário como um diálogo modal
+            }
+        }
     }
 }

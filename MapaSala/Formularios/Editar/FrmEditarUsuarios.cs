@@ -25,7 +25,9 @@ namespace MapaSala.Formularios.Editar
             usuarios = null;
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
+        
+     
+        private void btnSalvar_Click_1(object sender, EventArgs e)
         {
             Usuarios usuarios = new Usuarios();
             usuarios.Id = Convert.ToInt32(txtId.Text);
@@ -35,10 +37,9 @@ namespace MapaSala.Formularios.Editar
             usuarios.Editar();
             usuarios = null;
             this.Close();
-
         }
 
-        private void btn_excluir_Click(object sender, EventArgs e)
+        private void btn_excluir_Click_1(object sender, EventArgs e)
         {
             Usuarios usuarios = new Usuarios();
             usuarios.Id = Convert.ToInt32(txtId.Text);
